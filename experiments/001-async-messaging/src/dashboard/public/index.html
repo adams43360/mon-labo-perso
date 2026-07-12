@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Labo — Async messaging</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; }
+    fieldset { margin-bottom: 16px; }
+    button { margin-right: 8px; padding: 6px 12px; }
+    #log { background: #f4f4f4; padding: 12px; height: 200px; overflow-y: auto; font-family: monospace; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Async messaging — RabbitMQ vs Kafka</h1>
+
+  <fieldset>
+    <legend>Backend</legend>
+    <label><input type="radio" name="backend" value="rabbitmq" checked> RabbitMQ</label>
+    <label><input type="radio" name="backend" value="kafka"> Kafka</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Actions</legend>
+    <button id="send">Envoyer une tâche</button>
+    <button id="pause">Pause</button>
+    <button id="resume">Relancer</button>
+  </fieldset>
+
+  <div id="log"></div>
+
+  <script>
+    const log = (msg) => {
+      const el = document.getElementById("log");
+      el.textContent += msg + "\n";
+      el.scrollTop = el.scrollHeight;
+    };
+    const backend = () => document.querySelector('input[name="backend"]:checked').value;
+
+    document.getElementById("send").onclick = async () => {
+      const res = await fetch(`/tasks/${backend()}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "demo.task", payload: { note: "envoyée depuis le dashboard" } }),
+      });
+      log(`[${backend()}] tâche envoyée : ${JSON.stringify(await res.json())}`);
+    };
+    document.getElementById("pause").onclick = async () => {
+      await fetch(`/pause/${backend()}`, { method: "POST" });
+      log(`[${backend()}] consumer en pause`);
+    };
+    document.getElementById("resume").onclick = async () => {
+      await fetch(`/resume/${backend()}`, { method: "POST" });
+      log(`[${backend()}] consumer relancé`);
+    };
+  </script>
+</body>
+</html>

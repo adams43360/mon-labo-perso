@@ -1,0 +1,25 @@
+{
+  "name": "001-async-messaging",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:dashboard": "tsx src/dashboard/server.ts",
+    "test": "vitest run",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.4",
+    "kafkajs": "^2.2.4",
+    "zod": "^3.23.8",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "tsx": "^4.16.2",
+    "vitest": "^2.0.5",
+    "@types/amqplib": "^0.10.5",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.0"
+  }
+}
