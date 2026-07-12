@@ -20,6 +20,12 @@
   </fieldset>
 
   <fieldset>
+    <legend>Type de tâche</legend>
+    <label><input type="radio" name="tasktype" value="demo.task" checked> Normale</label>
+    <label><input type="radio" name="tasktype" value="demo.fail"> Échec simulé (déclenche DLQ / topic d'erreurs)</label>
+  </fieldset>
+
+  <fieldset>
     <legend>Actions</legend>
     <button id="send">Envoyer une tâche</button>
     <button id="pause">Pause</button>
@@ -27,6 +33,7 @@
   </fieldset>
 
   <div id="log"></div>
+  <p style="color:#666;font-size:13px">Le traitement des tâches s'affiche dans le terminal où tourne <code>npm run dev:dashboard</code>, pas ici.</p>
 
   <script>
     const log = (msg) => {
@@ -35,12 +42,13 @@
       el.scrollTop = el.scrollHeight;
     };
     const backend = () => document.querySelector('input[name="backend"]:checked').value;
+    const taskType = () => document.querySelector('input[name="tasktype"]:checked').value;
 
     document.getElementById("send").onclick = async () => {
       const res = await fetch(`/tasks/${backend()}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "demo.task", payload: { note: "envoyée depuis le dashboard" } }),
+        body: JSON.stringify({ type: taskType(), payload: { note: "envoyée depuis le dashboard" } }),
       });
       log(`[${backend()}] tâche envoyée : ${JSON.stringify(await res.json())}`);
     };

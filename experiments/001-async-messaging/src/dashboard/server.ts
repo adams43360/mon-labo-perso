@@ -2,9 +2,10 @@ import express from "express";
 import type { Channel } from "amqplib";
 import type { Producer } from "kafkajs";
 import { connectRabbit, sendTask as sendRabbitTask } from "../rabbitmq/producer/index.js";
-import { pauseConsumer as pauseRabbit, resumeConsumer as resumeRabbit } from "../rabbitmq/consumer/index.js";
+import { pauseConsumer as pauseRabbit, resumeConsumer as resumeRabbit, startConsumer as startRabbitConsumer } from "../rabbitmq/consumer/index.js";
 import { connectKafkaProducer, sendTask as sendKafkaTask } from "../kafka/producer/index.js";
-import { pauseConsumer as pauseKafka, resumeConsumer as resumeKafka } from "../kafka/consumer/index.js";
+import { pauseConsumer as pauseKafka, resumeConsumer as resumeKafka, startConsumer as startKafkaConsumer } from "../kafka/consumer/index.js";
+import type { Task } from "../shared/task.js";
 
 const app = express();
 app.use(express.json());
@@ -12,6 +13,22 @@ app.use(express.static(new URL("./public", import.meta.url).pathname));
 
 let rabbitChannel: Channel | undefined;
 let kafkaProducer: Producer | undefined;
+
+async function handleTask(backend: string, task: Task): Promise<void> {
+  console.log(`[${backend}] traitement de la tâche ${task.id} (${task.type})`);
+  if (task.type === "demo.fail") {
+    throw new Error("échec simulé pour démonstration");
+  }
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  console.log(`[${backend}] tâche ${task.id} traitée avec succès`);
+}
+
+startRabbitConsumer((task) => handleTask("rabbitmq", task)).catch((err) =>
+  console.error("Erreur consumer RabbitMQ:", err),
+);
+startKafkaConsumer((task) => handleTask("kafka", task)).catch((err) =>
+  console.error("Erreur consumer Kafka:", err),
+);
 
 app.post("/tasks/:backend", async (req, res) => {
   const { backend } = req.params;
@@ -41,4 +58,4 @@ app.post("/resume/:backend", (req, res) => {
 });
 
 const PORT = 3000;
-app.listen(PORT, () => console.log(`Dashboard API sur http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Dashboard sur http://localhost:${PORT}`));
