@@ -1,4 +1,5 @@
 import express from "express";
+import { fileURLToPath } from "node:url";
 import type { Channel } from "amqplib";
 import type { Producer } from "kafkajs";
 import { connectRabbit, sendTask as sendRabbitTask } from "../rabbitmq/producer/index.js";
@@ -9,7 +10,7 @@ import type { Task } from "../shared/task.js";
 
 const app = express();
 app.use(express.json());
-app.use(express.static(new URL("./public", import.meta.url).pathname));
+app.use(express.static(fileURLToPath(new URL("./public", import.meta.url))));
 
 let rabbitChannel: Channel | undefined;
 let kafkaProducer: Producer | undefined;
