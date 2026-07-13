@@ -19,6 +19,7 @@ Chaque sujet exploré (messaging asynchrone, RAG, observabilité, orchestration 
 | # | Sujet | Statut |
 |---|---|---|
 | 001 | Async messaging — RabbitMQ vs Kafka | En cours |
+| 002 | POC produit avec design system (shadcn/ui) + données mockées (MSW) | En cours |
 
 ## Conventions
 

@@ -3,6 +3,7 @@
 ## Now
 
 - 001 — Async messaging : RabbitMQ vs Kafka, comparatif côte à côte (dashboard commun)
+- 002 — POC produit avec design system (shadcn/ui) + données mockées (MSW) : tester la méthode avant de l'appliquer à une vraie feature TeamFit
 
 ## Next
 
