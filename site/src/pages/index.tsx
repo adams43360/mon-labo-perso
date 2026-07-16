@@ -1,0 +1,44 @@
+import type { ReactNode } from "react";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import Heading from "@theme/Heading";
+import ExperienceList from "@site/src/components/ExperienceList";
+
+import styles from "./index.module.css";
+
+function HomepageHeader() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <div className="container">
+        <Heading as="h1" className="hero__title">
+          {siteConfig.title}
+        </Heading>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Link className="button button--secondary button--lg" to="/blog">
+            Voir toutes les expériences
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default function Home(): ReactNode {
+  return (
+    <Layout
+      title="Accueil"
+      description="Un carnet de bord public d'expérimentations avec l'IA et les architectures modernes."
+    >
+      <HomepageHeader />
+      <main>
+        <section className="container margin-top--lg margin-bottom--xl">
+          <ExperienceList />
+        </section>
+      </main>
+    </Layout>
+  );
+}

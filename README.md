@@ -6,6 +6,10 @@ Chaque sujet exploré (messaging asynchrone, RAG, observabilité, orchestration 
 
 **Idée -> Analyse d'architecture (ADR) -> Implémentation + tests -> Documentation -> Publication -> Mise à jour du roadmap**
 
+## Le site
+
+Une fois GitHub Pages activé sur ce repo (Settings → Pages → Source: GitHub Actions), le site est accessible sur **https://adams43360.github.io/mon-labo-perso/** — page d'accueil avec toutes les expériences, navigation chronologique, docs (vision, roadmap, ADR).
+
 ## Naviguer dans ce repo
 
 - [`docs/00-vision.md`](docs/00-vision.md) — le pourquoi de ce labo

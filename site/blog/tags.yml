@@ -1,0 +1,11 @@
+async:
+  label: Async
+  description: Expériences liées au messaging asynchrone
+
+design-system:
+  label: Design system
+  description: Expériences liées aux design systems et au prototypage produit
+
+tokens:
+  label: Design tokens
+  description: Expériences liées aux tokens de design (theming, W3C DTCG, Style Dictionary)

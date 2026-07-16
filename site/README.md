@@ -1,15 +1,26 @@
-# Site — pas encore initialisé
+# Site — mon labo personnel
 
-Ce dossier accueillera le site Docusaurus qui agrège les expériences (voir `docs/adr/0001-choix-generateur-site.md`).
+Site Docusaurus qui centralise les expériences du labo, avec navigation chronologique (blog) et documentation (vision, roadmap, ADR).
 
-## Initialiser
+## Développement local
 
 ```bash
-cd site
-npx create-docusaurus@latest . classic --typescript
+npm install
+npm start
 ```
 
-Puis :
-- activer le plugin i18n (`fr` par défaut, `en` en complément) dans `docusaurus.config.ts`
-- brancher le plugin blog sur les `README.md` des expériences (via un plugin de contenu personnalisé ou une étape de build qui copie/normalise le frontmatter)
-- déployer via `.github/workflows/docs.yml` (GitHub Pages)
+Ouvre http://localhost:3000 (ou l'URL affichée).
+
+## Build
+
+```bash
+npm run build
+```
+
+Génère le site statique dans `build/`. Le déploiement sur GitHub Pages se fait automatiquement via `.github/workflows/docs.yml` à chaque push sur `main`.
+
+## Ajouter une expérience à la page d'accueil
+
+1. Ajoute une entrée dans `src/data/experiences.ts` (titre, résumé, statut, lien vers le dossier de l'expérience)
+2. Crée un billet de blog dans `blog/<numéro>-<nom-experience>/index.md` (frontmatter : slug, title, authors, tags, date), avec `{/* truncate */}` après le résumé pour couper l'aperçu sur la page blog
+3. Le billet doit renvoyer vers `experiments/<numéro>-<nom-experience>/` sur GitHub pour le détail complet (code, ADR) — le site est une vitrine, pas une duplication du repo
