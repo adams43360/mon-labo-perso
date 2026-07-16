@@ -1,0 +1,23 @@
+// Point d'entrée CSS unique : tout le style vient des tokens Carbon.
+// Règle du POC : zéro surcharge des composants (voir ARCHITECTURE.md).
+@use '@carbon/react' with (
+  // Les fontes IBM Plex sont servies par le CDN IBM (Akamai) :
+  // évite les imports «~» non résolus par Vite.
+  $use-akamai-cdn: true
+);
+
+body {
+  margin: 0;
+}
+
+// Mise en page uniquement (pas de style de composant) — tokens Carbon.
+.app-shell {
+  min-height: 100vh;
+  background: var(--cds-background);
+}
+
+.app-main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
