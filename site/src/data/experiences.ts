@@ -31,4 +31,14 @@ export const experiences: Experience[] = [
     repoPath: `${REPO_URL}/tree/main/experiments/002-poc-design-system`,
     blogSlug: "/blog/002-poc-design-system",
   },
+  {
+    id: "003",
+    title: "POC SaaS avec design system à tokens (IBM Carbon)",
+    summary:
+      "La variable inverse de 002 : un design system complet et opinioné, piloté par des tokens. Onboarding SaaS multi-étapes, retheming intégral par tokens sémantiques, zéro CSS custom.",
+    status: "En cours",
+    date: "2026-07-16",
+    repoPath: `${REPO_URL}/tree/main/experiments/003-poc-saas-carbon`,
+    blogSlug: "/blog/003-poc-saas-carbon",
+  },
 ];
