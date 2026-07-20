@@ -9,3 +9,11 @@ design-system:
 tokens:
   label: Design tokens
   description: Expériences liées aux tokens de design (theming, W3C DTCG, Style Dictionary)
+
+ia:
+  label: IA
+  description: Expériences liées à l'intelligence artificielle et aux modèles de langage
+
+evals:
+  label: Évals
+  description: Expériences liées à la mesure de la qualité des sorties d'IA

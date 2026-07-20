@@ -41,4 +41,14 @@ export const experiences: Experience[] = [
     repoPath: `${REPO_URL}/tree/main/experiments/003-poc-saas-carbon`,
     blogSlug: "/blog/003-poc-saas-carbon",
   },
+  {
+    id: "004",
+    title: "Harness d'évals LLM : promptfoo vs DeepEval vs Vitest maison",
+    summary:
+      "Comparatif de 3 outils de mesure de la qualité d'une IA sur une même tâche de classification (50 cas, 16 pièges). Verdict : le harness maison (Vitest) devient le standard du labo pour toutes les futures évals.",
+    status: "Documenté",
+    date: "2026-07-20",
+    repoPath: `${REPO_URL}/tree/main/experiments/004-harness-evals-llm`,
+    blogSlug: "/blog/004-harness-evals-llm",
+  },
 ];
