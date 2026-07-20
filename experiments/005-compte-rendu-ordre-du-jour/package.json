@@ -1,0 +1,21 @@
+{
+  "name": "005-compte-rendu-ordre-du-jour",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "eval": "tsx src/run.ts",
+    "eval:mock": "PROVIDER=mock tsx src/run.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "vitest": "^4.0.0"
+  },
+  "dependencies": {
+    "undici": "^8.7.0"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "categories": ["budget", "recrutement", "roadmap", "risques", "divers", "hors_ordre_du_jour"],
+  "ordreDuJour": [
+    { "bloc": "budget", "intitule": "Suivi budgétaire du trimestre" },
+    { "bloc": "recrutement", "intitule": "Ouvertures de poste et process de recrutement" },
+    { "bloc": "roadmap", "intitule": "Plan de charge et priorités du trimestre suivant" },
+    { "bloc": "risques", "intitule": "Risques projet et points de blocage" },
+    { "bloc": "divers", "intitule": "Points annexes prévus à l'ordre du jour" }
+  ],
+  "cases": [
+    { "id": 1, "blocEnCours": "budget", "message": "On a consommé 62% du budget trimestriel à ce stade, ce qui reste cohérent avec le planning initial.", "expected": "budget", "difficulte": "facile" },
+    { "id": 2, "blocEnCours": "budget", "message": "Il faut revoir l'enveloppe formation, on est en dépassement de 8% par rapport au prévisionnel.", "expected": "budget", "difficulte": "facile" },
+    { "id": 3, "blocEnCours": "budget", "message": "Le poste infra cloud a explosé ce mois-ci à cause du pic de trafic de septembre.", "expected": "budget", "difficulte": "facile" },
+    { "id": 4, "blocEnCours": "budget", "message": "Pouvez-vous m'envoyer le détail des dépenses par équipe avant la prochaine réunion ?", "expected": "budget", "difficulte": "facile" },
+    { "id": 5, "blocEnCours": "budget", "message": "On garde une marge de sécurité de 5% sur l'enveloppe globale au cas où il y aurait un imprévu d'ici la fin d'année.", "expected": "budget", "difficulte": "facile" },
+    { "id": 6, "blocEnCours": "budget", "message": "Est-ce que quelqu'un a vu le match hier soir ? Quelle fin de match !", "expected": "hors_ordre_du_jour", "difficulte": "facile" },
+    { "id": 7, "blocEnCours": "budget", "message": "Pendant qu'on y est, il faudrait qu'on parle du renouvellement du contrat de la mutuelle d'entreprise.", "expected": "hors_ordre_du_jour", "difficulte": "piege" },
+
+    { "id": 8, "blocEnCours": "recrutement", "message": "On a trois candidats retenus pour l'entretien final sur le poste de développeur backend.", "expected": "recrutement", "difficulte": "facile" },
+    { "id": 9, "blocEnCours": "recrutement", "message": "Le poste de chargé de recrutement reste ouvert depuis six semaines, on manque de candidatures qualifiées.", "expected": "recrutement", "difficulte": "facile" },
+    { "id": 10, "blocEnCours": "recrutement", "message": "Il faudrait relancer le cabinet de chasse sur le profil product manager, toujours pas de retour.", "expected": "recrutement", "difficulte": "facile" },
+    { "id": 11, "blocEnCours": "recrutement", "message": "L'intégration de la nouvelle alternante se passe bien, elle a pris ses marques rapidement.", "expected": "recrutement", "difficulte": "facile" },
+    { "id": 12, "blocEnCours": "recrutement", "message": "On devrait revoir la grille salariale du poste, elle n'est plus alignée avec le marché.", "expected": "recrutement", "difficulte": "facile" },
+    { "id": 13, "blocEnCours": "recrutement", "message": "On devrait organiser un afterwork bientôt, ça fait longtemps qu'on n'en a pas fait.", "expected": "hors_ordre_du_jour", "difficulte": "facile" },
+    { "id": 14, "blocEnCours": "recrutement", "message": "Il faudrait aussi qu'on cale un point sur la nouvelle politique de télétravail, mais pas aujourd'hui.", "expected": "hors_ordre_du_jour", "difficulte": "piege" },
+    { "id": 15, "blocEnCours": "recrutement", "message": "Pendant qu'on parle recrutement, ça va représenter combien de plus sur l'enveloppe du trimestre, cette embauche ?", "expected": "budget", "difficulte": "piege" },
+
+    { "id": 16, "blocEnCours": "roadmap", "message": "Pour le prochain trimestre, la priorité reste la refonte du module de facturation.", "expected": "roadmap", "difficulte": "facile" },
+    { "id": 17, "blocEnCours": "roadmap", "message": "Le chantier data est repoussé de deux semaines pour laisser de la place à la refonte facturation.", "expected": "roadmap", "difficulte": "facile" },
+    { "id": 18, "blocEnCours": "roadmap", "message": "On devrait geler les nouvelles demandes de features tant que la migration n'est pas terminée.", "expected": "roadmap", "difficulte": "facile" },
+    { "id": 19, "blocEnCours": "roadmap", "message": "La roadmap prévoit une revue de priorités mi-trimestre, on garde cette date ?", "expected": "roadmap", "difficulte": "facile" },
+    { "id": 20, "blocEnCours": "roadmap", "message": "Il faut arbitrer entre l'internationalisation et le chantier accessibilité, on ne peut pas mener les deux de front.", "expected": "roadmap", "difficulte": "facile" },
+    { "id": 21, "blocEnCours": "roadmap", "message": "Au fait, la salle de réunion du 2ème est enfin climatisée.", "expected": "hors_ordre_du_jour", "difficulte": "facile" },
+    { "id": 22, "blocEnCours": "roadmap", "message": "Avant de continuer sur la roadmap, une précision sur le recrutement : le poste senior est finalement pourvu en interne.", "expected": "recrutement", "difficulte": "piege" },
+    { "id": 23, "blocEnCours": "roadmap", "message": "Si on avance ce chantier data, il y a un vrai risque qu'on n'ait pas les compétences en interne pour le tenir dans les temps.", "expected": "risques", "difficulte": "piege" },
+    { "id": 24, "blocEnCours": "roadmap", "message": "Pour revenir sur un point annexe évoqué en introduction, la formation sécurité obligatoire doit être planifiée avant la fin du mois.", "expected": "divers", "difficulte": "piege" },
+
+    { "id": 25, "blocEnCours": "risques", "message": "Le principal risque identifié reste la dépendance à notre prestataire d'hébergement unique.", "expected": "risques", "difficulte": "facile" },
+    { "id": 26, "blocEnCours": "risques", "message": "On a un risque de retard sur la livraison si le recrutement du poste backend traîne encore.", "expected": "risques", "difficulte": "facile" },
+    { "id": 27, "blocEnCours": "risques", "message": "Le turnover sur l'équipe support commence à devenir un point de vigilance.", "expected": "risques", "difficulte": "facile" },
+    { "id": 28, "blocEnCours": "risques", "message": "Il faudrait documenter le plan de continuité en cas de panne du prestataire principal.", "expected": "risques", "difficulte": "facile" },
+    { "id": 29, "blocEnCours": "risques", "message": "Le risque juridique lié au nouveau contrat fournisseur doit être revu par le service juridique.", "expected": "risques", "difficulte": "facile" },
+    { "id": 30, "blocEnCours": "risques", "message": "Quelqu'un a des nouvelles du déménagement de bureau prévu l'année prochaine ?", "expected": "hors_ordre_du_jour", "difficulte": "facile" },
+    { "id": 31, "blocEnCours": "risques", "message": "Pour revenir sur le point budget qu'on a vite survolé tout à l'heure, je pense qu'on sous-estime les coûts d'infra.", "expected": "budget", "difficulte": "piege" },
+    { "id": 32, "blocEnCours": "risques", "message": "Ce retard de livraison va nous obliger à redécouper le planning du prochain trimestre, on regarde ça en détail au point roadmap ?", "expected": "roadmap", "difficulte": "piege" },
+    { "id": 33, "blocEnCours": "risques", "message": "Sinon, est-ce qu'on a confirmé la date du séminaire d'équipe prévu ce trimestre ?", "expected": "divers", "difficulte": "piege" },
+
+    { "id": 34, "blocEnCours": "divers", "message": "Petit rappel : le séminaire d'équipe est confirmé pour la troisième semaine du trimestre.", "expected": "divers", "difficulte": "facile" },
+    { "id": 35, "blocEnCours": "divers", "message": "On planifie le point d'étape avec le comité de direction pour la semaine prochaine.", "expected": "divers", "difficulte": "facile" },
+    { "id": 36, "blocEnCours": "divers", "message": "Il faut valider la liste des invités pour l'événement client de fin d'année.", "expected": "divers", "difficulte": "facile" },
+    { "id": 37, "blocEnCours": "divers", "message": "Le renouvellement de la certification qualité est prévu ce trimestre, rien à signaler pour l'instant.", "expected": "divers", "difficulte": "facile" },
+    { "id": 38, "blocEnCours": "divers", "message": "Je voulais rebondir sur le recrutement du poste QA évoqué plus tôt : on a une candidature intéressante arrivée ce matin.", "expected": "recrutement", "difficulte": "piege" },
+    { "id": 39, "blocEnCours": "divers", "message": "Avant de clore, sur la priorisation du trimestre prochain, je pense qu'on devrait avancer le chantier data.", "expected": "roadmap", "difficulte": "piege" },
+    { "id": 40, "blocEnCours": "divers", "message": "Un point qu'on a zappé tout à l'heure : le prestataire principal a eu un incident de sécurité la semaine dernière.", "expected": "risques", "difficulte": "piege" }
+  ]
+}
