@@ -8,6 +8,8 @@ date: 2026-07-20
 
 Quand on demande à une IA de faire une tâche répétitive — trier des messages, classer des documents, extraire une information — comment sait-on qu'elle fait bien son travail ? On ne peut pas se contenter de "ça a l'air correct" en regardant quelques exemples. Il faut une méthode pour la tester à grande échelle, objectivement, et pouvoir répéter le test à chaque fois qu'on change quelque chose. C'est ce qu'on appelle une **éval** (évaluation) — l'équivalent d'un contrôle qualité pour l'IA.
 
+Petite précision avant de commencer : ce labo, c'est un espace que j'ai décidé de monter pour tester sérieusement des sujets IA — idées, essais, ratés compris — avec la même rigueur qu'un vrai projet. J'ai pris le parti de partager ces retours d'expérience régulièrement, et de les vulgariser autant que possible, pour que ce soit à la portée de tout le monde et pas réservé aux développeurs. Cet article en est un bon exemple : le sujet est technique, mais l'idée derrière (comment vérifier qu'une IA ne se trompe pas) parle à peu près à tout le monde.
+
 {/* truncate */}
 
 ## Le problème : plusieurs outils, aucune idée duquel choisir
@@ -47,6 +49,10 @@ Sur ce terrain, l'écart a été net. Le harness maison (construit avec Vitest, 
 **Le labo adopte le harness maison comme standard pour toutes les futures évals IA.** Il est déjà dans la même stack que le reste du projet, ne dépend d'aucun outil externe, et produit un rapport directement exploitable. promptfoo reste dans la boîte à outils pour de l'exploration ponctuelle. DeepEval est mis de côté pour l'instant — il pourrait redevenir utile si un futur test a besoin de ses fonctionnalités avancées (juger la pertinence ou la fidélité d'une réponse plutôt qu'une simple bonne/mauvaise réponse), mais ce n'est pas le choix par défaut.
 
 Concrètement, cette expérience n'est pas un test isolé : c'est un outil qu'on va réutiliser directement pour la vingtaine d'expériences IA prévues dans le labo (voir la [roadmap](/docs/roadmap)) — extraction de données, résumés, recherche par similarité, et bien d'autres. Plutôt que de repartir de zéro à chaque fois, on a désormais une méthode testée, validée, et prête à l'emploi.
+
+## Une idée de test à proposer ?
+
+Si un sujet IA te trotte dans la tête et que tu te demandes "est-ce que ça marcherait vraiment ?", c'est exactement le genre de question que ce labo cherche à creuser. Toutes les idées sont les bienvenues — pas besoin d'être développeur ou expert IA pour en avoir une bonne. Dépose-la ici : [**boîte à idées**](https://docs.google.com/forms/d/e/1FAIpQLScoLCYcsYA1uCPFaJ12dQZVPGHOQ9f5Qvu-qtvsIzpqbUbPjw/viewform).
 
 ## Pour aller plus loin
 
