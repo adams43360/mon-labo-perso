@@ -33,40 +33,47 @@ Trié par score décroissant. Axes : 🔧 ingénierie IA · 📦 IA appliquée p
 | 10 | **Embeddings comparés** (OpenAI, Voyage, open-source) sur une tâche de similarité métier RH | 🔧 | 4 | 4 | 0.9 | 1.5 | **9.6** |
 | 11 | **Model cascading coût/latence** : router petit modèle → gros modèle selon la difficulté, courbe coût/qualité | 🔧 | 4 | 3 | 0.8 | 1 | **9.6** |
 | 12 | **Génération de contenu contrôlée** : templates + tone of voice + éval automatique de conformité | 📦 | 4 | 3 | 0.8 | 1 | **9.6** |
-| 13 | **Guardrails & prompt injection** : batterie d'attaques sur un chatbot, taux de contournement avant/après protections | 🔧 | 4 | 4 | 0.8 | 1.5 | **8.5** |
-| 14 | **Transcription + résumé de réunion** (Whisper → LLM), qualité mesurée sur vraies réunions | 📦 | 3 | 3 | 0.9 | 1 | **8.1** |
-| 15 | **Matching sémantique candidats/offres** par embeddings — mini POC RH avec métriques de ranking | 📦 | 5 | 4 | 0.8 | 2 | **8.0** |
-| 16 | **Caching sémantique** de réponses LLM : taux de hit et économies sur trafic réaliste | 🔧 | 3 | 3 | 0.8 | 1 | **7.2** |
-| 17 | **Chatbot RAG sur le site du labo** : le Docusaurus qui répond sur ses propres expériences (démo embarquée MDX) | 📦 | 4 | 4 | 0.9 | 2 | **7.2** |
-| 18 | **Vector DB comparées** : pgvector vs Qdrant vs Weaviate, benchmark ingestion/latence/rappel *(déjà en Next)* | 🔧 | 5 | 5 | 0.8 | 3 | **6.7** |
-| 19 | **Observabilité LLM** : tracing OpenTelemetry + Langfuse/Phoenix — croise l'expé OTel déjà prévue | 🔧 | 4 | 4 | 0.8 | 2 | **6.4** |
-| 20 | **LLM local** : Ollama + modèle open-weight vs API, qualité/coût/latence sur un cas réel | 🔧 | 3 | 4 | 0.8 | 1.5 | **6.4** |
-| 21 | **Recherche hybride** : BM25 + vecteurs + reranker, gain mesuré vs vecteurs seuls | 🔧 | 4 | 4 | 0.8 | 2 | **6.4** |
-| 22 | **Vision sur documents** : extraction de tableaux/données depuis scans et screenshots, précision mesurée | 📦 | 4 | 3 | 0.8 | 1.5 | **6.4** |
-| 23 | **Doc auto & drift detection** : générer README/ADR depuis le code, détecter la doc périmée en CI | 🤖 | 4 | 3 | 0.8 | 1.5 | **6.4** |
-| 24 | **Human-in-the-loop UI** : classification LLM + interface de validation/correction, boucle d'amélioration | 📦 | 4 | 4 | 0.7 | 2 | **5.6** |
-| 25 | **Génération de tests par IA** : qualité mesurée par mutation testing (Stryker) vs tests écrits main | 🤖 | 4 | 4 | 0.7 | 2 | **5.6** |
-| 26 | **Frameworks d'agents comparés** : LangGraph vs Claude Agent SDK vs CrewAI sur un même workflow *(déjà en Later)* | 🔧 | 4 | 5 | 0.7 | 3 | **4.7** |
-| 27 | **Fine-tuning vs few-shot vs RAG** sur une même tâche de classification : coût/qualité/maintenance | 🔧 | 3 | 5 | 0.7 | 3 | **3.5** |
-| 28 | **Spec-driven development** : PRD → implémentation par agent, mesurer l'écart avec l'intention | 🤖 | 3 | 5 | 0.6 | 3 | **3.0** |
+| 13 | **Ton poli vs ton direct avec l'IA** : la politesse envers un chatbot change-t-elle vraiment la qualité de la réponse ? Un mythe populaire tranché avec des chiffres | 📦 | 2 | 3 | 0.8 | 0.5 | **9.6** |
+| 14 | **Combien coûterait vraiment de remplacer une tâche par de l'IA** : calcul chiffré et concret (ex. trier des CV, résumer des réunions) comparé au temps humain équivalent | 📦 | 3 | 4 | 0.8 | 1 | **9.6** |
+| 15 | **La formulation du prompt change-t-elle vraiment la réponse** : la même question posée de 10 manières différentes, pour vérifier si les "trucs de prompting" qu'on voit partout sont vrais ou du vent | 🔧 | 4 | 3 | 0.8 | 1 | **9.6** |
+| 16 | **Guardrails & prompt injection** : batterie d'attaques sur un chatbot, taux de contournement avant/après protections | 🔧 | 4 | 4 | 0.8 | 1.5 | **8.5** |
+| 17 | **Comptes-rendus de réunion structurés par ordre du jour** : plutôt qu'un résumé linéaire plat (le défaut des outils actuels type Otter/Fireflies), router automatiquement les échanges vers les blocs connus de l'ordre du jour — décisions, points ouverts, actions par bloc — avec un bloc "hors ordre du jour" pour ce qui déborde. Réutilise directement la méthode de classification de l'expérience 004 | 📦 | 4 | 4 | 0.8 | 1.5 | **8.5** |
+| 18 | **Matching sémantique candidats/offres** par embeddings — mini POC RH avec métriques de ranking | 📦 | 5 | 4 | 0.8 | 2 | **8.0** |
+| 19 | **Caching sémantique** de réponses LLM : taux de hit et économies sur trafic réaliste | 🔧 | 3 | 3 | 0.8 | 1 | **7.2** |
+| 20 | **Chatbot RAG sur le site du labo** : le Docusaurus qui répond sur ses propres expériences (démo embarquée MDX) | 📦 | 4 | 4 | 0.9 | 2 | **7.2** |
+| 21 | **Vector DB comparées** : pgvector vs Qdrant vs Weaviate, benchmark ingestion/latence/rappel *(déjà en Next)* | 🔧 | 5 | 5 | 0.8 | 3 | **6.7** |
+| 22 | **Observabilité LLM** : tracing OpenTelemetry + Langfuse/Phoenix — croise l'expé OTel déjà prévue | 🔧 | 4 | 4 | 0.8 | 2 | **6.4** |
+| 23 | **LLM local** : Ollama + modèle open-weight vs API, qualité/coût/latence sur un cas réel | 🔧 | 3 | 4 | 0.8 | 1.5 | **6.4** |
+| 24 | **Recherche hybride** : BM25 + vecteurs + reranker, gain mesuré vs vecteurs seuls | 🔧 | 4 | 4 | 0.8 | 2 | **6.4** |
+| 25 | **Vision sur documents** : extraction de tableaux/données depuis scans et screenshots, précision mesurée | 📦 | 4 | 3 | 0.8 | 1.5 | **6.4** |
+| 26 | **Doc auto & drift detection** : générer README/ADR depuis le code, détecter la doc périmée en CI | 🤖 | 4 | 3 | 0.8 | 1.5 | **6.4** |
+| 27 | **Human-in-the-loop UI** : classification LLM + interface de validation/correction, boucle d'amélioration | 📦 | 4 | 4 | 0.7 | 2 | **5.6** |
+| 28 | **Génération de tests par IA** : qualité mesurée par mutation testing (Stryker) vs tests écrits main | 🤖 | 4 | 4 | 0.7 | 2 | **5.6** |
+| 29 | **Biais de l'IA sur des CV identiques, prénom différent** : reproduire un classique de la recherche sur l'équité algorithmique avec la méthode d'éval du labo, résultats présentés factuellement | 📦 | 3 | 4 | 0.7 | 1.5 | **5.6** |
+| 30 | **Frameworks d'agents comparés** : LangGraph vs Claude Agent SDK vs CrewAI sur un même workflow *(déjà en Later)* | 🔧 | 4 | 5 | 0.7 | 3 | **4.7** |
+| 31 | **Humain ou IA : sauriez-vous faire la différence ?** Plusieurs textes vrais/générés mélangés, jeu de devinette avant de révéler les scores | 📦 | 2 | 3 | 0.7 | 1 | **4.2** |
+| 32 | **Fine-tuning vs few-shot vs RAG** sur une même tâche de classification : coût/qualité/maintenance | 🔧 | 3 | 5 | 0.7 | 3 | **3.5** |
+| 33 | **Spec-driven development** : PRD → implémentation par agent, mesurer l'écart avec l'intention | 🤖 | 3 | 5 | 0.6 | 3 | **3.0** |
 
 ## Lecture du classement
 
 Trois patterns se dégagent :
 
 - **Les briques transverses gagnent** (#1, #2, #9, #10) : structured output, chunking, évals et embeddings sont réutilisés par quasiment toutes les autres expériences. Les faire tôt rend tout le reste moins cher.
-- **Les gros comparatifs descendent** (#18, #26, #27) malgré un fort impact d'apprentissage : l'effort les pénalise. Ils restent pertinents mais gagnent à venir après les briques (ex. le comparatif vector DB profite d'avoir déjà le harness d'évals du #9).
+- **Les gros comparatifs descendent** (#21 vector DB, #30 frameworks d'agents, #32 fine-tuning) malgré un fort impact d'apprentissage : l'effort les pénalise. Ils restent pertinents mais gagnent à venir après les briques (ex. le comparatif vector DB profite d'avoir déjà le harness d'évals du #9).
 - **Le workflow dev est un quick win** (#4, #5, #8) : petit effort, bénéfice immédiat sur le labo lui-même — et matière à publier sur le site.
+
+Un quatrième pattern émerge avec les ajouts récents : **les idées à forte portée "grand public"** (#13 ton poli, #14 coût de remplacement, #15 formulation du prompt, #17 réunion structurée, #29 biais CV, #31 humain-ou-IA) sont volontairement moins réutilisables techniquement (R plus bas) mais compensent par un effort réduit et une histoire facile à raconter — utile pour équilibrer le contenu du site entre briques techniques et sujets qui parlent à tout le monde.
 
 ## Candidats "Next" proposés
 
 1. **#1 Structured output** — la brique la plus réutilisable, effort minimal
-2. **#9 Harness d'évals** — prérequis de fait pour la moitié du backlog
+2. **#9 Harness d'évals** — prérequis de fait pour la moitié du backlog *(terminé)*
 3. **#4 Skills Claude Code labo** — rend chaque expérience suivante plus rapide
 
 ## Filiations entre expériences
 
-`#9 évals` → débloque #1, #2, #7, #10, #13, #21, #25 (tous ont besoin de mesurer).
-`#2 chunking` + `#10 embeddings` → préparent #18 vector DB et #17 chatbot RAG.
-`#18 vector DB` → prépare #15 matching et #21 recherche hybride.
+`#9 évals` → débloque #1, #2, #7, #10, #16, #24, #28 (tous ont besoin de mesurer) — et prépare directement #17 (réunion structurée), qui réutilise la même méthode de classification.
+`#2 chunking` + `#10 embeddings` → préparent #21 vector DB et #20 chatbot RAG.
+`#21 vector DB` → prépare #18 matching et #24 recherche hybride.
 `#3 MCP` + `#4 skills` → se combinent naturellement avec #8 code review.
