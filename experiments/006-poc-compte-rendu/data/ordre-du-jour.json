@@ -1,0 +1,7 @@
+[
+  { "bloc": "budget", "intitule": "Suivi budgétaire du trimestre" },
+  { "bloc": "recrutement", "intitule": "Ouvertures de poste et process de recrutement" },
+  { "bloc": "roadmap", "intitule": "Plan de charge et priorités du trimestre suivant" },
+  { "bloc": "risques", "intitule": "Risques projet et points de blocage" },
+  { "bloc": "divers", "intitule": "Points annexes prévus à l'ordre du jour" }
+]

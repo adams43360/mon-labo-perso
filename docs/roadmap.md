@@ -7,6 +7,7 @@
 - 003 — POC SaaS formulaires avec design system complet à tokens (IBM Carbon) : la variable inverse de 002 (système opinioné vs composants possédés), retheming par tokens
 - 004 — Harness d'évals LLM : promptfoo vs DeepEval vs harness Vitest maison, sur une classification de 50 messages RH → **terminé**, verdict : harness maison (Vitest) adopté comme standard du labo (voir [experiments/004-harness-evals-llm](../experiments/004-harness-evals-llm/README.md))
 - 005 — Compte-rendu de réunion structuré par ordre du jour → **terminé**, hypothèse validée (100%/91.7% d'accuracy sur les pièges), verdict : mérite un POC cliquable (voir [experiments/005-compte-rendu-ordre-du-jour](../experiments/005-compte-rendu-ordre-du-jour/README.md))
+- 006 — POC : compte-rendu structuré sur un transcript complet, en une seule passe (suite directe de 005) (voir [experiments/006-poc-compte-rendu](../experiments/006-poc-compte-rendu/README.md))
 
 ## Next
 
