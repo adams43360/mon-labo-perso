@@ -1,0 +1,5 @@
+# Versions épinglées — DeepEval a des breaking changes fréquents (cf. mini-PRD, risques)
+deepeval==3.2.5
+anthropic==0.57.1
+openai==1.93.0
+pytest==8.4.1

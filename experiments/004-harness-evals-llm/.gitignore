@@ -1,0 +1,9 @@
+node_modules/
+.env
+*.log
+results/*.json
+harnesses/deepeval/.venv/
+harnesses/deepeval/.deepeval/
+harnesses/promptfoo/tests.yaml
+harnesses/promptfoo/prompt.json
+__pycache__/
