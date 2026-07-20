@@ -40,4 +40,4 @@ Hors périmètre :
 
 ## Statut
 
-En cours
+Documenté — hypothèse validée (100%/91.7% d'accuracy sur les pièges), score global de 82.5% expliqué par des limites du dataset (frontière divers/hors-sujet, cas faciles ambigus) plutôt que par la méthode. Verdict : mérite un POC cliquable. Voir `README.md` et `docs/issue-draft.md`.

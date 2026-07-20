@@ -2,7 +2,7 @@
 tags: [ia, evals, compte-rendu]
 date: 2026-07-20
 stack: [TypeScript, Vitest]
-statut: en-cours
+statut: documenté
 ---
 
 # 005 — Compte-rendu de réunion structuré par ordre du jour
@@ -35,7 +35,11 @@ Chaque run écrit `results/<provider>-<model>.json` et un rapport markdown (accu
 
 ## Résultats
 
-_À remplir après les runs réels — voir les tableaux dans [`docs/issue-draft.md`](docs/issue-draft.md)._
+**82.5% d'accuracy globale sur les deux modèles testés (Claude Haiku 4.5 et GPT-4o-mini) — mais 100% et 91.7% sur les pièges**, c'est-à-dire sur les cas conçus spécifiquement pour tester l'hypothèse (sujet mentionné dans le mauvais bloc, reprise tardive d'un point déjà traité). **L'hypothèse centrale est validée** : un LLM route fiablement une intervention vers le bon bloc d'ordre du jour, indépendamment du bloc officiellement en cours.
+
+Les erreurs qui expliquent le 82.5% viennent d'ailleurs : la frontière `divers`/`hors_ordre_du_jour` (un défaut de définition du dataset, invisible dans le contenu lui-même) et quelques cas "faciles" en réalité ambigus (deux sujets réels dans la même phrase). Détail complet, exemples et démonstration résumé plat vs structuré dans [`docs/issue-draft.md`](docs/issue-draft.md).
+
+**Verdict : l'idée mérite une itération produit** — un POC cliquable (méthode 002/003) sur un vrai ordre du jour et un transcript plus réaliste, avant de parler d'un outil à part entière.
 
 Run mock (classifieur heuristique, sans IA) à titre de validation du harness : 90% d'accuracy globale, 75% sur les pièges — cohérent avec un mock qui ignore volontairement le bloc en cours, contrairement à ce qu'on attend d'un vrai LLM.
 

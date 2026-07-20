@@ -37,7 +37,7 @@ Trié par score décroissant. Axes : 🔧 ingénierie IA · 📦 IA appliquée p
 | 14 | **Combien coûterait vraiment de remplacer une tâche par de l'IA** : calcul chiffré et concret (ex. trier des CV, résumer des réunions) comparé au temps humain équivalent | 📦 | 3 | 4 | 0.8 | 1 | **9.6** |
 | 15 | **La formulation du prompt change-t-elle vraiment la réponse** : la même question posée de 10 manières différentes, pour vérifier si les "trucs de prompting" qu'on voit partout sont vrais ou du vent | 🔧 | 4 | 3 | 0.8 | 1 | **9.6** |
 | 16 | **Guardrails & prompt injection** : batterie d'attaques sur un chatbot, taux de contournement avant/après protections | 🔧 | 4 | 4 | 0.8 | 1.5 | **8.5** |
-| 17 | **Comptes-rendus de réunion structurés par ordre du jour** : plutôt qu'un résumé linéaire plat (le défaut des outils actuels type Otter/Fireflies), router automatiquement les échanges vers les blocs connus de l'ordre du jour. Réutilise directement le harness de l'expérience 004 → **en cours : expérience [005](../experiments/005-compte-rendu-ordre-du-jour/README.md)** | 📦 | 4 | 4 | 0.8 | 1.5 | **8.5** |
+| 17 | **Comptes-rendus de réunion structurés par ordre du jour** : plutôt qu'un résumé linéaire plat (le défaut des outils actuels type Otter/Fireflies), router automatiquement les échanges vers les blocs connus de l'ordre du jour. Réutilise directement le harness de l'expérience 004 → **terminé : expérience [005](../experiments/005-compte-rendu-ordre-du-jour/README.md)**, hypothèse validée, mérite un POC cliquable | 📦 | 4 | 4 | 0.8 | 1.5 | **8.5** |
 | 18 | **Matching sémantique candidats/offres** par embeddings — mini POC RH avec métriques de ranking | 📦 | 5 | 4 | 0.8 | 2 | **8.0** |
 | 19 | **Caching sémantique** de réponses LLM : taux de hit et économies sur trafic réaliste | 🔧 | 3 | 3 | 0.8 | 1 | **7.2** |
 | 20 | **Chatbot RAG sur le site du labo** : le Docusaurus qui répond sur ses propres expériences (démo embarquée MDX) | 📦 | 4 | 4 | 0.9 | 2 | **7.2** |
@@ -69,7 +69,7 @@ Un quatrième pattern émerge avec les ajouts récents : **les idées à forte p
 
 1. **#1 Structured output** — la brique la plus réutilisable, effort minimal
 2. **#9 Harness d'évals** — prérequis de fait pour la moitié du backlog *(terminé)*
-3. **#17 Réunion structurée par ordre du jour** *(en cours — expérience 005)*
+3. **#17 Réunion structurée par ordre du jour** *(terminé — expérience 005, mérite un POC cliquable en suite)*
 4. **#4 Skills Claude Code labo** — rend chaque expérience suivante plus rapide
 
 ## Filiations entre expériences
