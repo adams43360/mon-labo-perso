@@ -51,4 +51,14 @@ export const experiences: Experience[] = [
     repoPath: `${REPO_URL}/tree/main/experiments/004-harness-evals-llm`,
     blogSlug: "/blog/004-harness-evals-llm",
   },
+  {
+    id: "005",
+    title: "Compte-rendu de réunion structuré par ordre du jour",
+    summary:
+      "Plutôt qu'un résumé plat, router chaque intervention vers le bon bloc d'un ordre du jour connu. Hypothèse validée (100%/92% d'accuracy sur les cas pièges) — prochaine étape : un POC cliquable.",
+    status: "Documenté",
+    date: "2026-07-20",
+    repoPath: `${REPO_URL}/tree/main/experiments/005-compte-rendu-ordre-du-jour`,
+    blogSlug: "/blog/005-compte-rendu-ordre-du-jour",
+  },
 ];
